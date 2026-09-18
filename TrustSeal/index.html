@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Trust Seal — Delivery Integrity</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=League+Spartan:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header class="navbar">
+
+
+    <a href="#home" class="logo">
+
+
+        <!-- TRANSPARENT TRUST SEAL LOGO -->
+
+        <span class="brand-mark">
+
+            <svg
+                class="logo-svg"
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="Trust Seal logo"
+            >
+
+                <!-- shield -->
+
+                <path
+                    d="M50 6
+                       L87 22
+                       L87 50
+                       C87 73 72 89 50 96
+                       C28 89 13 73 13 50
+                       L13 22 Z"
+                    fill="none"
+                    stroke="#3B1E03"
+                    stroke-width="7"
+                    stroke-linejoin="round"
+                />
+
+                <!-- package -->
+
+                <path
+                    d="M29 39
+                       L50 28
+                       L71 39
+                       L71 65
+                       L50 77
+                       L29 65 Z"
+                    fill="#BF8414"
+                />
+
+                <!-- package center -->
+
+                <path
+                    d="M50 28
+                       L50 77"
+                    stroke="#FFF9F0"
+                    stroke-width="4"
+                />
+
+                <!-- package tape -->
+
+                <path
+                    d="M42 32
+                       L58 40
+                       L58 70
+                       L42 62 Z"
+                    fill="#5E1C23"
+                />
+
+                <!-- lock -->
+
+                <rect
+                    x="44"
+                    y="48"
+                    width="12"
+                    height="12"
+                    rx="2"
+                    fill="#FFF9F0"
+                />
+
+                <path
+                    d="M47 48
+                       V44
+                       C47 39 53 39 53 44
+                       V48"
+                    fill="none"
+                    stroke="#FFF9F0"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                />
+
+            </svg>
+
+        </span>
+
+
+        <span class="brand-name">
+            TRUST<span>SEAL</span>
+        </span>
+
+
+    </a>
+
+
+
+    <nav class="desktop-nav">
+
+        <a href="#customer">ORDER</a>
+
+        <a href="#restaurant">RESTAURANT</a>
+
+        <a href="#timeline">JOURNEY</a>
+
+        <a href="#security">SECURITY</a>
+
+    </nav>
+
+
+
+    <button
+        class="verify-nav"
+        id="navVerify"
+    >
+        VERIFY PACKAGE
+    </button>
+
+
+
+    <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open menu"
+    >
+        ☰
+    </button>
+
+
+</header>
+
+
+
+<!-- =========================
+     MOBILE NAV
+========================= -->
+
+<nav
+    class="mobile-nav"
+    id="mobileNav"
+>
+
+    <a href="#customer">ORDER</a>
+
+    <a href="#restaurant">RESTAURANT</a>
+
+    <a href="#package">PACKAGE</a>
+
+    <a href="#timeline">JOURNEY</a>
+
+    <a href="#security">SECURITY</a>
+
+    <a href="#tamper">TAMPER ANALYSIS</a>
+
+    <a href="#verify">VERIFY DELIVERY</a>
+
+</nav>
+
+
+
+<main>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+
+    <div class="hero-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?auto=format&fit=crop&w=1800&q=90"
+            alt="Food served on a table"
+        >
+
+    </div>
+
+
+
+    <div class="hero-dark"></div>
+
+
+
+    <div class="hero-content">
+
+
+        <div class="eyebrow">
+
+            <span></span>
+
+            SMART DELIVERY INTEGRITY
+
+        </div>
+
+
+
+        <h1>
+
+            KNOW WHAT
+            <br>
+
+            HAPPENED
+            <br>
+
+            BEFORE YOU
+            <br>
+
+            <em>OPENED IT.</em>
+
+        </h1>
+
+
+
+        <p class="hero-description">
+
+            Trust Seal creates a verifiable digital trail
+            for your delivery — from restaurant sealing
+            to authorized handover.
+
+        </p>
+
+
+
+        <div class="hero-buttons">
+
+
+            <button
+                class="button white-button"
+                id="viewOrder"
+            >
+                VIEW PACKAGE
+            </button>
+
+
+
+            <a
+                href="#timeline"
+                class="button outline-button"
+            >
+                SEE ITS JOURNEY ↓
+            </a>
+
+
+        </div>
+
+
+
+        <div class="hero-bottom">
+
+            <span>
+                DELIVERY INTEGRITY
+            </span>
+
+            <span>
+                SEAL · LIGHT · MOTION · TIME
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section
+    class="section intro"
+    id="intro"
+>
+
+
+    <div class="intro-grid">
+
+
+        <div>
+
+            <p class="label">
+                TRUST SEAL
+            </p>
+
+
+            <h2>
+
+                Your package
+                travels through
+                <em>many hands.</em>
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="intro-text">
+
+
+            <p>
+
+                From the restaurant kitchen to pickup,
+                transit and finally your doorstep, your
+                delivery goes through a journey before
+                it reaches you.
+
+            </p>
+
+
+
+            <p>
+
+                Trust Seal records the important events
+                so you can understand what happened before
+                opening your package.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     CUSTOMER
+========================= -->
+
+<section
+    class="section customer"
+    id="customer"
+>
+
+
+    <div class="customer-heading">
+
+
+        <p class="label">
+            DELIVERY PROFILE
+        </p>
+
+
+        <h2>
+
+            Your delivery,
+            <em>verified.</em>
+
+        </h2>
+
+
+        <p class="customer-intro">
+
+            A clear record of the recipient, package,
+            restaurant and monitoring device associated
+            with this delivery.
+
+        </p>
+
+
+    </div>
+
+
+
+    <div class="customer-dashboard">
+
+
+        <div class="customer-top">
+
+
+            <div class="customer-person">
+
+
+                <div class="avatar">
+                    AJ
+                </div>
+
+
+                <div>
+
+                    <span>
+                        CUSTOMER
+                    </span>
+
+
+                    <h3>
+                        Alex Johnson
+                    </h3>
+
+
+                    <p>
+                        Verified delivery recipient
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="order-status">
+
+                <span class="status-dot"></span>
+
+                DELIVERY MONITORED
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="customer-info-grid">
+
+
+            <div class="info-item">
+
+                <span>
+                    ORDER ID
+                </span>
+
+                <strong>
+                    #ORD-78142
+                </strong>
+
+            </div>
+
+
+
+            <div class="info-item">
+
+                <span>
+                    PACKAGE ID
+                </span>
+
+                <strong>
+                    TS-1048
+                </strong>
+
+            </div>
+
+
+
+            <div class="info-item">
+
+                <span>
+                    MONITORING DEVICE
+                </span>
+
+                <strong>
+                    ESP32-TS01
+                </strong>
+
+            </div>
+
+
+
+            <div class="info-item">
+
+                <span>
+                    DELIVERY STATUS
+                </span>
+
+                <strong class="olive-text">
+                    ACTIVE
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="customer-footer">
+
+
+            <div>
+
+                <span>
+                    RECORD CREATED
+                </span>
+
+                <strong>
+                    14:02:11
+                </strong>
+
+            </div>
+
+
+
+            <div>
+
+                <span>
+                    INTEGRITY
+                </span>
+
+                <strong>
+                    EVENT CHAIN READY
+                </strong>
+
+            </div>
+
+
+
+            <div>
+
+                <span>
+                    RECEIVER
+                </span>
+
+                <strong>
+                    AWAITING HANDOVER
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     RESTAURANT
+========================= -->
+
+<section
+    class="section restaurant"
+    id="restaurant"
+>
+
+
+    <div class="restaurant-grid">
+
+
+        <div class="restaurant-text">
+
+
+            <p class="label">
+                WHERE THE JOURNEY STARTS
+            </p>
+
+
+            <h2>
+
+                Sealed at
+                the <em>source.</em>
+
+            </h2>
+
+
+            <p>
+
+                When the restaurant seals your package,
+                Trust Seal is activated. This becomes
+                the first recorded event in the delivery
+                history.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="restaurant-card">
+
+
+            <div class="verified">
+
+                <span>✓</span>
+
+                VERIFIED RESTAURANT
+
+            </div>
+
+
+
+            <h3>
+                Olive & Basil
+            </h3>
+
+
+            <p class="restaurant-sub">
+                Kitchen 04 · Food Delivery
+            </p>
+
+
+
+            <div class="restaurant-details">
+
+
+                <div>
+
+                    <small>
+                        DEVICE
+                    </small>
+
+                    <strong>
+                        ESP32-TS01
+                    </strong>
+
+                </div>
+
+
+
+                <div>
+
+                    <small>
+                        SEALED
+                    </small>
+
+                    <strong>
+                        14:02:11
+                    </strong>
+
+                </div>
+
+
+
+                <div>
+
+                    <small>
+                        STATUS
+                    </small>
+
+                    <strong>
+                        SECURED
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="seal-active">
+
+
+                <div class="seal-check">
+                    ✓
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Monitoring started
+                    </strong>
+
+                    <small>
+                        Package successfully sealed
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     PACKAGE
+========================= -->
+
+<section
+    class="section package"
+    id="package"
+>
+
+
+    <div class="package-heading">
+
+
+        <p class="label">
+            PACKAGE INFORMATION
+        </p>
+
+
+        <h2>
+
+            Know what is
+            <em>being delivered.</em>
+
+        </h2>
+
+
+        <p>
+
+            The package identity is linked to the
+            monitoring record created when the
+            restaurant sealed the delivery.
+
+        </p>
+
+
+    </div>
+
+
+
+    <div class="package-card">
+
+
+        <div class="package-card-header">
+
+
+            <div>
+
+                <span>
+                    PACKAGE
+                </span>
+
+                <h3>
+                    TS-1048
+                </h3>
+
+            </div>
+
+
+
+            <div class="package-state">
+                SEALED
+            </div>
+
+
+        </div>
+
+
+
+        <div class="package-details">
+
+
+            <div>
+
+                <span>
+                    ORDER
+                </span>
+
+                <strong>
+                    #ORD-78142
+                </strong>
+
+            </div>
+
+
+
+            <div>
+
+                <span>
+                    RESTAURANT
+                </span>
+
+                <strong>
+                    Olive & Basil
+                </strong>
+
+            </div>
+
+
+
+            <div>
+
+                <span>
+                    DEVICE
+                </span>
+
+                <strong>
+                    ESP32-TS01
+                </strong>
+
+            </div>
+
+
+
+            <div>
+
+                <span>
+                    ACTIVATED
+                </span>
+
+                <strong>
+                    14:02:11
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="package-monitoring">
+
+
+            <div class="monitor-icon">
+                ✓
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Monitoring active
+                </strong>
+
+                <p>
+
+                    Seal, light, motion and event timing
+                    are being recorded.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     TIMELINE
+========================= -->
+
+<section
+    class="section timeline-section"
+    id="timeline"
+>
+
+
+    <div class="timeline-heading">
+
+
+        <p class="label">
+            DELIVERY HISTORY
+        </p>
+
+
+        <h2>
+
+            Your order,
+            <em>step by step.</em>
+
+        </h2>
+
+
+        <p>
+
+            Every important stage is recorded with
+            a timestamp.
+
+        </p>
+
+
+    </div>
+
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-event">
+
+
+            <div class="time">
+                14:02:11
+            </div>
+
+
+            <div class="timeline-dot active"></div>
+
+
+            <div class="event-card">
+
+
+                <span>
+                    RESTAURANT
+                </span>
+
+
+                <h3>
+                    Monitoring started
+                </h3>
+
+
+                <p>
+
+                    Package sealed and device activated
+                    at Olive & Basil.
+
+                </p>
+
+
+                <small>
+                    ✓ EVENT RECORDED
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="timeline-event">
+
+
+            <div class="time">
+                14:08:42
+            </div>
+
+
+            <div class="timeline-dot"></div>
+
+
+            <div class="event-card">
+
+
+                <span>
+                    PICKUP
+                </span>
+
+
+                <h3>
+                    Package picked up
+                </h3>
+
+
+                <p>
+
+                    Movement detected, consistent
+                    with handover.
+
+                </p>
+
+
+                <small>
+                    ✓ EVENT RECORDED
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="timeline-event">
+
+
+            <div class="time">
+                14:14:26
+            </div>
+
+
+            <div class="timeline-dot"></div>
+
+
+            <div class="event-card">
+
+
+                <span>
+                    TRANSIT
+                </span>
+
+
+                <h3>
+                    In transit
+                </h3>
+
+
+                <p>
+
+                    Normal movement pattern detected.
+
+                </p>
+
+
+                <small>
+                    ✓ EVENT RECORDED
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="timeline-event">
+
+
+            <div class="time">
+                14:42:07
+            </div>
+
+
+            <div class="timeline-dot"></div>
+
+
+            <div class="event-card">
+
+
+                <span>
+                    STATIONARY
+                </span>
+
+
+                <h3>
+                    Package stationary
+                </h3>
+
+
+                <p>
+
+                    No suspicious combination of
+                    sensor events detected.
+
+                </p>
+
+
+                <small>
+                    ✓ EVENT RECORDED
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="timeline-event">
+
+
+            <div class="time">
+                15:03:19
+            </div>
+
+
+            <div class="timeline-dot final"></div>
+
+
+            <div class="event-card">
+
+
+                <span>
+                    ARRIVAL
+                </span>
+
+
+                <h3>
+                    Arrived at receiver
+                </h3>
+
+
+                <p>
+
+                    Package reached the receiver and
+                    is awaiting authorized handover.
+
+                </p>
+
+
+                <small>
+                    ● AWAITING VERIFICATION
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     HASH CHAIN
+========================= -->
+
+<section
+    class="section security"
+    id="security"
+>
+
+
+    <div class="security-heading">
+
+
+        <div>
+
+
+            <p class="label">
+                EVENT INTEGRITY
+            </p>
+
+
+            <h2>
+
+                Every event
+                connects to
+                <em>the next.</em>
+
+            </h2>
+
+
+        </div>
+
+
+        <p>
+
+            Each event is linked with the previous event.
+            This creates a chain that can be checked
+            for unexpected changes.
+
+        </p>
+
+
+    </div>
+
+
+
+    <div class="hash-chain">
+
+
+        <div class="hash-card">
+
+            <span>
+                EVENT 01
+            </span>
+
+            <strong>
+                SEALED
+            </strong>
+
+            <code>
+                7A9F...31C2
+            </code>
+
+        </div>
+
+
+        <div class="arrow">
+            →
+        </div>
+
+
+        <div class="hash-card">
+
+            <span>
+                EVENT 02
+            </span>
+
+            <strong>
+                PICKUP
+            </strong>
+
+            <code>
+                91B4...E820
+            </code>
+
+        </div>
+
+
+        <div class="arrow">
+            →
+        </div>
+
+
+        <div class="hash-card">
+
+            <span>
+                EVENT 03
+            </span>
+
+            <strong>
+                TRANSIT
+            </strong>
+
+            <code>
+                44D1...A913
+            </code>
+
+        </div>
+
+
+        <div class="arrow">
+            →
+        </div>
+
+
+        <div class="hash-card">
+
+            <span>
+                EVENT 04
+            </span>
+
+            <strong>
+                ARRIVAL
+            </strong>
+
+            <code>
+                C82E...771A
+            </code>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="chain-result">
+
+
+        <span>
+            ✓
+        </span>
+
+
+        <div>
+
+            <strong>
+                EVENT CHAIN VERIFIED
+            </strong>
+
+            <small>
+                Package history is internally consistent.
+            </small>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     TAMPER ANALYSIS
+========================= -->
+
+<section
+    class="section tamper"
+    id="tamper"
+>
+
+
+    <div class="tamper-grid">
+
+
+        <div class="tamper-text">
+
+
+            <p class="label">
+                TAMPER ANALYSIS
+            </p>
+
+
+            <h2>
+
+                We check
+                <em>multiple signals.</em>
+
+            </h2>
+
+
+            <p>
+
+                Trust Seal doesn't rely on one sensor alone.
+                Seal state, light, motion and event timing
+                are considered together.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- LARGE SENSOR PANEL -->
+
+        <div class="sensor-card">
+
+
+            <!-- SEAL -->
+
+            <div class="sensor">
+
+
+                <div class="sensor-icon">
+                    S
+                </div>
+
+
+                <div class="sensor-name">
+
+                    <strong>
+                        Seal
+                    </strong>
+
+                    <small>
+                        Physical seal state
+                    </small>
+
+                </div>
+
+
+                <div class="sensor-status">
+                    NORMAL
+                </div>
+
+
+            </div>
+
+
+
+            <!-- LIGHT -->
+
+            <div class="sensor">
+
+
+                <div class="sensor-icon">
+                    L
+                </div>
+
+
+                <div class="sensor-name">
+
+                    <strong>
+                        Light
+                    </strong>
+
+                    <small>
+                        Unexpected exposure
+                    </small>
+
+                </div>
+
+
+                <div class="sensor-status">
+                    NORMAL
+                </div>
+
+
+            </div>
+
+
+
+            <!-- MOTION -->
+
+            <div class="sensor">
+
+
+                <div class="sensor-icon">
+                    M
+                </div>
+
+
+                <div class="sensor-name">
+
+                    <strong>
+                        Motion
+                    </strong>
+
+                    <small>
+                        Movement pattern
+                    </small>
+
+                </div>
+
+
+                <div class="sensor-status">
+                    NORMAL
+                </div>
+
+
+            </div>
+
+
+
+            <!-- TIME -->
+
+            <div class="sensor">
+
+
+                <div class="sensor-icon">
+                    T
+                </div>
+
+
+                <div class="sensor-name">
+
+                    <strong>
+                        Time
+                    </strong>
+
+                    <small>
+                        Event sequence
+                    </small>
+
+                </div>
+
+
+                <div class="sensor-status">
+                    VALID
+                </div>
+
+
+            </div>
+
+
+
+            <!-- RESULT -->
+
+            <div class="tamper-result">
+
+
+                <div class="result-check">
+                    ✓
+                </div>
+
+
+                <div class="result-content">
+
+
+                    <small>
+                        OVERALL RESULT
+                    </small>
+
+
+                    <strong>
+                        NO TAMPERING DETECTED
+                    </strong>
+
+
+                    <span>
+                        Seal intact · sensors normal · chain verified
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     QR VERIFICATION
+========================= -->
+
+<section
+    class="section verify-section"
+    id="verify"
+>
+
+
+    <div class="verify-grid">
+
+
+        <div class="verify-text">
+
+
+            <p class="label">
+                RECEIVER VERIFICATION
+            </p>
+
+
+            <h2>
+
+                Your package
+                is at the
+                <em>door.</em>
+
+            </h2>
+
+
+            <p>
+
+                Scan the package code to confirm the
+                authorized receiver has taken possession
+                of the delivery.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="qr-card">
+
+
+            <div class="qr-top">
+
+
+                <span>
+                    PACKAGE CODE
+                </span>
+
+
+                <strong>
+                    TS-1048
+                </strong>
+
+
+            </div>
+
+
+
+            <div class="fake-qr">
+
+
+                <div class="qr-lines"></div>
+
+
+                <span>
+                    TS
+                </span>
+
+
+            </div>
+
+
+
+            <p class="scan-label">
+                SCAN TO VERIFY DELIVERY
+            </p>
+
+
+
+            <button
+                class="verify-button"
+                id="verifyButton"
+            >
+                SCAN & VERIFY DELIVERY
+            </button>
+
+
+
+            <p
+                class="verification-message"
+                id="verificationMessage"
+            ></p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     COMPLETE
+========================= -->
+
+<section
+    class="complete"
+    id="complete"
+>
+
+
+    <div class="complete-icon">
+        ✓
+    </div>
+
+
+    <p>
+        DELIVERY VERIFIED
+    </p>
+
+
+    <h2>
+
+        Package verified.
+        <br>
+
+        <em>Enjoy your food.</em>
+
+    </h2>
+
+
+    <span>
+
+        Monitoring deactivated after authorized handover.
+
+    </span>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+
+    <div class="footer-logo">
+
+
+        <svg
+            class="footer-logo-svg"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+
+            <path
+                d="M50 8 L85 23 L85 51
+                   C85 72 70 88 50 94
+                   C30 88 15 72 15 51
+                   L15 23 Z"
+                fill="none"
+                stroke="#F0C96F"
+                stroke-width="7"
+            />
+
+            <path
+                d="M34 43 L50 34 L66 43
+                   L66 64 L50 74 L34 64 Z"
+                fill="#BF8414"
+            />
+
+        </svg>
+
+
+        TRUST <span>SEAL</span>
+
+
+    </div>
+
+
+
+    <div>
+        DELIVERY INTEGRITY · TRUST SEAL
+    </div>
+
+
+
+    <a href="#home">
+        BACK TO TOP ↑
+    </a>
+
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
