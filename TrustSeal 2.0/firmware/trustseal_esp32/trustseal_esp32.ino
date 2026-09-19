@@ -7,9 +7,9 @@
 #include <NTPClient.h>
 #include <WiFiUdp.h>
 
-const char* ssid = "YOUR_WIFI_NETWORK";
-const char* password = "YOUR_WIFI_PASSWORD";
-const char* API_BASE_URL = "http://192.168.1.10:5000";
+const char* ssid = "OPPO F29 5G z4ay";
+const char* password = "ienn7477";
+const char* API_BASE_URL = "http://172.17.223.95:5000";
 const char* DEVICE_ID = "TS-ESP32-001";
 
 const int TAMPER_PIN = 25;
