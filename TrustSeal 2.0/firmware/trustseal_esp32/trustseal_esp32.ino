@@ -1,8 +1,5 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
-#include <Wire.h>
-#include <Adafruit_MPU6050.h>
-#include <Adafruit_Sensor.h>
 #include <ArduinoJson.h>
 #include <NTPClient.h>
 #include <WiFiUdp.h>
@@ -20,14 +17,12 @@ const int GREEN_LED = 32;
 const int RED_LED = 33;
 
 const int LIGHT_THRESH = 2000;
-const float MOTION_THRESH = 12.0;
 const int TAMPER_TRIGGER_SCORE = 65;
 
 bool isSystemActive = false;
 bool hasBeenTampered = false;
 String initialTamperTime = "N/A";
 
-Adafruit_MPU6050 mpu;
 WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP, "pool.ntp.org", 19800, 60000);
 
@@ -123,20 +118,6 @@ void setup() {
   pinMode(GREEN_LED, OUTPUT);
   pinMode(RED_LED, OUTPUT);
 
-  Wire.begin(21, 22);
-
-  if (!mpu.begin()) {
-    Serial.println("MPU6050 not found.");
-    while (true) {
-      digitalWrite(RED_LED, !digitalRead(RED_LED));
-      delay(300);
-    }
-  }
-
-  mpu.setAccelerometerRange(MPU6050_RANGE_8_G);
-  mpu.setGyroRange(MPU6050_RANGE_500_DEG);
-  mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
-
   connectWiFi();
   timeClient.begin();
   timeClient.update();
@@ -156,10 +137,6 @@ void loop() {
   }
 
   int ldr = analogRead(LDR_AO_PIN);
-
-  sensors_event_t a, g, temp;
-  mpu.getEvent(&a, &g, &temp);
-
   bool tamper = digitalRead(TAMPER_PIN) == HIGH;
   bool second = USE_SECOND_SWITCH && digitalRead(SECOND_SWITCH_PIN) == HIGH;
 
@@ -167,24 +144,30 @@ void loop() {
   if (tamper) score += 50;
   if (second) score += 20;
   if (ldr > LIGHT_THRESH) score += 15;
-  if (abs(a.acceleration.z) > MOTION_THRESH || abs(a.acceleration.x) > MOTION_THRESH) score += 15;
 
-  float motion = sqrt(
-    a.acceleration.x * a.acceleration.x +
-    a.acceleration.y * a.acceleration.y +
-    a.acceleration.z * a.acceleration.z
-  );
+  // Sending a dummy 0.0 motion value to the website since the sensor is removed
+  float motion = 0.0; 
 
   if (isSystemActive && !hasBeenTampered && score >= TAMPER_TRIGGER_SCORE) {
     hasBeenTampered = true;
     initialTamperTime = currentTime();
     setLEDs();
-    Serial.println("TAMPER DETECTED");
+    Serial.println("\n🚨 TAMPER DETECTED! 🚨");
   }
 
   if (now - lastPost >= 3000) {
     lastPost = now;
     sendData(score, ldr, motion);
+    
+    // --- LIVE SERIAL MONITOR PRINTS ---
+    Serial.print("Score: "); 
+    Serial.print(score);
+    Serial.print(" | LDR: "); 
+    Serial.print(ldr);
+    Serial.print(" | System Active: "); 
+    Serial.print(isSystemActive ? "YES" : "NO");
+    Serial.print(" | Tampered: "); 
+    Serial.println(hasBeenTampered ? "YES" : "NO");
   }
 
   delay(250);
