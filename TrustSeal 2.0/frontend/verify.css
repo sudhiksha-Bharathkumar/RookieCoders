@@ -1,0 +1,254 @@
+
+/* =====================================================
+   TRUSTSEAL VERIFICATION PAGE
+   Uses the exact TrustSeal theme variables and visual language.
+===================================================== */
+
+.verify-page {
+    padding-top: 72px;
+}
+
+.verify-hero {
+    position: relative;
+    min-height: 68vh;
+    padding: 120px 7vw 75px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+    background: var(--espresso);
+}
+
+.verify-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 80% 30%, rgba(191,132,20,.25), transparent 35%),
+        linear-gradient(90deg, rgba(30,18,9,.98), rgba(30,18,9,.82));
+}
+
+.verify-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+}
+
+.verify-hero h1 {
+    max-width: 900px;
+    font-size: clamp(56px,8vw,112px);
+    font-weight: 800;
+    line-height: .87;
+    letter-spacing: -.065em;
+    text-transform: uppercase;
+}
+
+.verify-hero h1 em {
+    color: var(--honey-light);
+    font-family: var(--serif);
+    font-weight: 500;
+    font-style: italic;
+    text-transform: none;
+}
+
+.verify-id {
+    display: inline-flex;
+    margin-top: 32px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.2);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .1em;
+}
+
+.verify-body {
+    padding: 125px 8vw;
+    background: var(--paper);
+}
+
+.verify-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.verify-heading h2 {
+    margin-top: 18px;
+    font-family: var(--serif);
+    font-size: clamp(56px,7vw,98px);
+    font-weight: 500;
+    line-height: .92;
+    letter-spacing: -.045em;
+}
+
+.verify-heading h2 em {
+    color: var(--olive);
+}
+
+.verify-heading > p:last-child {
+    max-width: 570px;
+    margin-top: 27px;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.verify-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(59,30,3,.08);
+}
+
+.verify-card-top {
+    padding: 30px 34px;
+    background: var(--espresso);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.verify-card-top span,
+.detail span {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: .1em;
+    color: var(--muted);
+}
+
+.verify-card-top span { color: rgba(255,255,255,.55); }
+
+.verify-card-top strong {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .08em;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.detail {
+    min-height: 115px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 9px;
+    border-bottom: 1px solid var(--border);
+}
+
+.detail:nth-child(odd) { border-right: 1px solid var(--border); }
+
+.detail strong { font-size: 15px; }
+
+.verify-card-status {
+    margin: 18px;
+    padding: 18px;
+    border-radius: 12px;
+    background: rgba(124,129,73,.12);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.verify-card-status .monitor-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--olive);
+    color: white;
+    flex-shrink: 0;
+}
+
+.verify-card-status strong {
+    display: block;
+    font-size: 13px;
+}
+
+.verify-card-status small {
+    display: block;
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.verify-timeline {
+    padding: 125px 8vw;
+    background: var(--cream);
+}
+
+.verify-timeline .timeline-heading { max-width: 850px; margin-bottom: 70px; }
+
+.verify-actions {
+    padding: 125px 8vw;
+    background: var(--espresso);
+    color: white;
+    text-align: center;
+}
+
+.verify-actions h2 {
+    max-width: 900px;
+    margin: 18px auto 35px;
+    font-family: var(--serif);
+    font-size: clamp(56px,7vw,100px);
+    font-weight: 500;
+    line-height: .9;
+}
+
+.verify-actions h2 em {
+    color: var(--honey-light);
+}
+
+.verify-button-live {
+    display: inline-flex;
+    min-height: 52px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px;
+    border: 0;
+    border-radius: 30px;
+    background: white;
+    color: var(--espresso);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.verify-button-live:hover {
+    background: var(--honey-light);
+    transform: translateY(-2px);
+}
+
+.verify-result {
+    max-width: 700px;
+    margin: 25px auto 0;
+    color: rgba(255,255,255,.7);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .08em;
+}
+
+@media (max-width: 850px) {
+    .verify-layout { grid-template-columns: 1fr; gap: 50px; }
+}
+
+@media (max-width: 600px) {
+    .verify-hero, .verify-body, .verify-timeline, .verify-actions {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    .detail-grid { grid-template-columns: 1fr; }
+    .detail:nth-child(odd) { border-right: 0; }
+}

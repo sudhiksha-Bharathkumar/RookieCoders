@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustSeal — Verify Package</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=League+Spartan:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="verify.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">
+        <span class="brand-mark"><svg
+                class="logo-svg"
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="Trust Seal logo"
+            >
+
+                <!-- shield -->
+
+                <path
+                    d="M50 6
+                       L87 22
+                       L87 50
+                       C87 73 72 89 50 96
+                       C28 89 13 73 13 50
+                       L13 22 Z"
+                    fill="none"
+                    stroke="#3B1E03"
+                    stroke-width="7"
+                    stroke-linejoin="round"
+                />
+
+                <!-- package -->
+
+                <path
+                    d="M29 39
+                       L50 28
+                       L71 39
+                       L71 65
+                       L50 77
+                       L29 65 Z"
+                    fill="#BF8414"
+                />
+
+                <!-- package center -->
+
+                <path
+                    d="M50 28
+                       L50 77"
+                    stroke="#FFF9F0"
+                    stroke-width="4"
+                />
+
+                <!-- package tape -->
+
+                <path
+                    d="M42 32
+                       L58 40
+                       L58 70
+                       L42 62 Z"
+                    fill="#5E1C23"
+                />
+
+                <!-- lock -->
+
+                <rect
+                    x="44"
+                    y="48"
+                    width="12"
+                    height="12"
+                    rx="2"
+                    fill="#FFF9F0"
+                />
+
+                <path
+                    d="M47 48
+                       V44
+                       C47 39 53 39 53 44
+                       V48"
+                    fill="none"
+                    stroke="#FFF9F0"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                />
+
+            </svg></span>
+        <span class="brand-name">TRUST<span>SEAL</span></span>
+    </a>
+    <nav class="desktop-nav">
+        <a href="index.html#how">HOW IT WORKS</a>
+        <a href="index.html#technology">TECHNOLOGY</a>
+        <a href="index.html#journey">JOURNEY</a>
+        <a href="index.html#business">FOR BUSINESS</a>
+    </nav>
+    <a class="verify-nav" href="index.html">BACK TO SITE</a>
+    <button class="menu-button" id="menuButton" aria-label="Open menu">☰</button>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+    <a href="index.html#how">HOW IT WORKS</a>
+    <a href="index.html#technology">TECHNOLOGY</a>
+    <a href="index.html#journey">JOURNEY</a>
+    <a href="index.html#business">FOR BUSINESS</a>
+</nav>
+
+<main class="verify-page">
+    <section class="verify-hero">
+        <div class="verify-hero-content">
+            <div class="eyebrow"><span></span>CUSTOMER VERIFICATION</div>
+            <h1>
+                CHECK WHAT
+                <br>HAPPENED
+                <br>BEFORE YOU
+                <br><em>RECEIVE IT.</em>
+            </h1>
+            <div class="verify-id" id="heroId">TRUSTSEAL · TS-1048</div>
+        </div>
+    </section>
+
+    <section class="verify-body">
+        <div class="verify-layout">
+            <div class="verify-heading">
+                <p class="label">PACKAGE RECORD</p>
+                <h2>
+                    Your delivery,
+                    <em>verified.</em>
+                </h2>
+                <p>
+                    This page is opened by the TrustSeal QR identifier. It shows
+                    the package record and delivery events associated with this seal.
+                </p>
+            </div>
+
+            <div class="verify-card">
+                <div class="verify-card-top">
+                    <span>TRUSTSEAL ID</span>
+                    <strong id="trustsealId">TS-1048</strong>
+                </div>
+
+                <div class="detail-grid">
+                    <div class="detail"><span>CUSTOMER</span><strong id="customerName">—</strong></div>
+                    <div class="detail"><span>ORDER</span><strong id="orderId">—</strong></div>
+                    <div class="detail"><span>PACKAGE</span><strong id="packageName">—</strong></div>
+                    <div class="detail"><span>SEALED AT</span><strong id="sealedAt">—</strong></div>
+                    <div class="detail"><span>RESTAURANT</span><strong id="restaurantName">—</strong></div>
+                    <div class="detail"><span>DEVICE</span><strong id="deviceId">—</strong></div>
+                </div>
+
+                <div class="verify-card-status">
+                    <div class="monitor-icon">✓</div>
+                    <div>
+                        <strong id="statusText">LOADING PACKAGE</strong>
+                        <small id="statusDetail">Reading TrustSeal record…</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="verify-timeline">
+        <div class="timeline-heading">
+            <p class="label">DELIVERY HISTORY</p>
+            <h2>
+                The journey,
+                <em>step by step.</em>
+            </h2>
+            <p>Review the timestamped events before confirming receipt.</p>
+        </div>
+
+        <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section class="verify-actions">
+        <p class="label" style="color:var(--honey-light);">AUTHORIZED HANDOVER</p>
+        <h2>
+            Ready to
+            <em>confirm?</em>
+        </h2>
+        <button class="verify-button-live" id="verifyButton">CONFIRM RECEIPT</button>
+        <div class="verify-result" id="verificationMessage">
+            Prototype mode — production handover should use OTP/customer authentication.
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-logo">
+
+
+        <svg
+            class="footer-logo-svg"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+
+            <path
+                d="M50 8 L85 23 L85 51
+                   C85 72 70 88 50 94
+                   C30 88 15 72 15 51
+                   L15 23 Z"
+                fill="none"
+                stroke="#F0C96F"
+                stroke-width="7"
+            />
+
+            <path
+                d="M34 43 L50 34 L66 43
+                   L66 64 L50 74 L34 64 Z"
+                fill="#BF8414"
+            />
+
+        </svg>
+
+
+        TRUST <span>SEAL</span>
+
+
+    </div>
+    <div>PACKAGE VERIFICATION · TRUSTSEAL</div>
+    <a href="index.html">TRUSTSEAL HOME ↑</a>
+</footer>
+
+<script src="verify.js"></script>
+</body>
+</html>
