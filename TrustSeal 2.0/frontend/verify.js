@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const API_BASE = "http://127.0.0.1:5000";
+    const API_BASE = "http://172.17.223.95:5000";
 
     const params = new URLSearchParams(window.location.search);
     const trustsealId = params.get("id") || "TS-1048";
